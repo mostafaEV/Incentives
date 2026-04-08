@@ -24,8 +24,50 @@ jobs:
       - name: Run scraper
         run: python scraper.py --sources dsire federal states pace greenbanks demand water
 
-      - name: Copy JSON to root
-        run: find . -name "capex_incentives.json" 2>/dev/null || echo "JSON not found"$
+      - name: Convert DB to JSON for dashboard
+        run: |
+          python3 << 'EOF'
+          import sqlite3, json, datetime, os
+
+          conn = sqlite3.connect("incentives.db")
+          conn.row_factory = sqlite3.Row
+          rows = conn.execute("""
+              SELECT name, org,
+                     program_type as type,
+                     capex_category as cat,
+                     state, equipment as equip_json,
+                     incentive_amount as amt,
+                     incentive_type as itype,
+                     max_incentive as max,
+                     deadline,
+                     eligible_sectors as sector,
+                     stacking_allowed as stack,
+                     source_url as url,
+                     notes, qa_status
+              FROM programs ORDER BY capex_category, state, name
+          """).fetchall()
+
+          programs = []
+          for r in rows:
+              p = dict(r)
+              try:
+                  p['equip'] = json.loads(p.pop('equip_json') or '[]')
+              except:
+                  p['equip'] = []
+              programs.append(p)
+
+          output = {
+              "metadata": {
+                  "last_updated": datetime.datetime.utcnow().isoformat() + "Z",
+                  "total_programs": len(programs),
+                  "source": "live_scraper"
+              },
+              "programs": programs
+          }
+          with open("capex_incentives.json", "w") as f:
+              json.dump(output, f, indent=2)
+          print(f"Exported {len(programs)} programs")
+          EOF
 
       - name: Commit updated data
         run: |
