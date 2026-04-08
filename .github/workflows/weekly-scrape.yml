@@ -25,7 +25,7 @@ jobs:
         run: python scraper.py --sources dsire federal states pace greenbanks demand water
 
       - name: Copy JSON to root
-        run: cp capex_incentives.json ./capex_incentives.json || true
+        run: find . -name "capex_incentives.json" 2>/dev/null || echo "JSON not found"$
 
       - name: Commit updated data
         run: |
