@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-04-08T13:07:10.591290Z",
-    "total_programs": 56,
+    "last_updated": "2026-04-13T11:08:42.102290Z",
+    "total_programs": 59,
     "source": "live_scraper"
   },
   "programs": [
@@ -203,7 +203,7 @@
       "sector": "Commercial, Industrial",
       "stack": "Yes",
       "url": "https://commerce.idaho.gov/energy/",
-      "notes": "Idaho's Energy Industry - Idaho Commerce Idaho\u2019s Energy Industry Events Join us at Commerce Connection in Sandpoint Apr 9 Main Street Now Conference Apr 13 \u2013 Apr 15 Innovative Tech Trade Mission to Japan Apr 21 \u2013 Apr 24 View All Events Press Releases Mar 24 Idaho Travel Council Announces March Meeting Mar 20 Governor Little Appoints New Member to Idaho Travel Council Mar 20 Idaho Broadband Advisor",
+      "notes": "Idaho's Energy Industry - Idaho Commerce Idaho\u2019s Energy Industry Events Main Street Now Conference Apr 13 \u2013 Apr 15 Innovative Tech Trade Mission to Japan Apr 21 \u2013 Apr 24 From Potato Chips to MicroChips May 7 \u2013 May 8 View All Events Press Releases Mar 24 Idaho Travel Council Announces March Meeting Mar 20 Governor Little Appoints New Member to Idaho Travel Council Mar 20 Idaho Broadband Advisory Bo",
       "qa_status": "unreviewed",
       "equip": [
         "Solar",
@@ -216,14 +216,14 @@
       "type": "State",
       "cat": "Energy Efficiency",
       "state": "KS",
-      "amt": "$11.4",
+      "amt": "$500,000",
       "itype": "Rebate",
       "max": "",
       "deadline": "Ongoing",
       "sector": "Commercial, Industrial",
       "stack": "Yes",
       "url": "https://www.kansascommerce.gov/energy/",
-      "notes": "Buildings Lieutenant Governor and Secretary of Commerce David Toland today announced the launch of the Industrial Renovation for Opportunity and New Economic Development (IRONED) pilot program. View All Our Department Business Resources Incentives & Financing, Taxes, Credits & Exemptions, Site Selection, Doing Business in Kansas Quality Places Infrastructure assessment, community planning, develop",
+      "notes": "today announced $500,000 in Rural Apprenticeship Innovation for a Strong Economy (RAISE) funding to support the expansion of Registered Apprenticeship programs across rural Kansas. View All Our Department Business Resources Incentives & Financing, Taxes, Credits & Exemptions, Site Selection, Doing Business in Kansas Quality Places Infrastructure assessment, community planning, development support,",
       "qa_status": "unreviewed",
       "equip": [
         "HVAC",
@@ -232,7 +232,70 @@
       ]
     },
     {
+      "name": "KS Commerce Energy \u2014 Lighting, Building Controls",
+      "org": "KS Commerce",
+      "type": "State",
+      "cat": "Energy Efficiency",
+      "state": "KS",
+      "amt": "$7.5",
+      "itype": "Rebate",
+      "max": "",
+      "deadline": "Ongoing",
+      "sector": "Commercial, Industrial",
+      "stack": "Yes",
+      "url": "https://www.kansascommerce.gov/energy/",
+      "notes": "Energy and Natural Resources in Kansas - Kansas Department of Commerce Skip Navigation Business News Governor Kelly Announces Indra Group to Invest Nearly $7.5M to Manufacture Air Traffic Radars in Kansas March 23, 2026 Gov. Kelly and Kansas City Chiefs Announce Agreement On Plans for State-of-the-Art Domed Stadium in Kansas December 22, 2025 Governor Kelly Celebrates Grand Opening of Panasonic EV",
+      "qa_status": "unreviewed",
+      "equip": [
+        "Lighting",
+        "Building Controls"
+      ]
+    },
+    {
+      "name": "KS Commerce Energy \u2014 Lighting, Solar, Building Controls",
+      "org": "KS Commerce",
+      "type": "State",
+      "cat": "Energy Efficiency",
+      "state": "KS",
+      "amt": "$11.4",
+      "itype": "Rebate",
+      "max": "",
+      "deadline": "Ongoing",
+      "sector": "Commercial, Industrial",
+      "stack": "Yes",
+      "url": "https://www.kansascommerce.gov/energy/",
+      "notes": "Kansas. Wind energy provided 41% of electricity generation in Kansas, the second-largest share for any state. Kansas offers a diverse portfolio of financial incentives to businesses and producers engaged in conventional and renewable energy production. State tax credits are available for projects that convert waste heat or biomass to energy, or otherwise offset local power usage via renewable sour",
+      "qa_status": "unreviewed",
+      "equip": [
+        "Lighting",
+        "Solar",
+        "Building Controls"
+      ]
+    },
+    {
       "name": "MassCEC Clean Energy \u2014 HVAC, Lighting, Building Controls",
+      "org": "MassCEC",
+      "type": "State",
+      "cat": "Energy Efficiency",
+      "state": "MA",
+      "amt": "$25,000",
+      "itype": "Rebate",
+      "max": "",
+      "deadline": "Ongoing",
+      "sector": "Commercial, Industrial",
+      "stack": "Yes",
+      "url": "https://www.masscec.com/programs",
+      "notes": "Home | MassCEC Skip to main content Image We're making Massachusetts the global hub for the climatetech industry We are supporting hundreds of innovative companies, creating thousands of good jobs, and attracting billions of dollars in investment. See the Massachusetts Climatetech Economic Development Strategy & Implementation Plan to learn more! \u200b Go to the Plan Our Track Record Since 2010, MassC",
+      "qa_status": "unreviewed",
+      "equip": [
+        "HVAC",
+        "Lighting",
+        "Building Controls",
+        "Insulation"
+      ]
+    },
+    {
+      "name": "MassCEC Clean Energy \u2014 Pump, HVAC, Lighting",
       "org": "MassCEC",
       "type": "State",
       "cat": "Energy Efficiency",
@@ -247,6 +310,7 @@
       "notes": "energy systems installed across Massachusetts. Explore system performance, production, and participation in clean energy incentive programs through reports and interactive dashboards. Explore Everyday Benefits of Clean Energy Clean Energy Lives Here shows how clean energy is improving daily life across the state\u2014from lower energy bills and healthier homes to local jobs and stronger communities. Ex",
       "qa_status": "unreviewed",
       "equip": [
+        "Pump",
         "HVAC",
         "Lighting",
         "Building Controls",
