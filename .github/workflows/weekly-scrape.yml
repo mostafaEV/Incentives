@@ -22,7 +22,7 @@ jobs:
           playwright install-deps chromium
 
       - name: Run scraper
-        run: python scraper.py --sources dsire federal states pace greenbanks demand water
+        run: python scraper.py --sources vfd federal pace greenbanks demand water
 
       - name: Convert DB to JSON for dashboard
         run: |
