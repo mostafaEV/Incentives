@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-04-17T14:27:00.714480Z",
-    "total_programs": 57,
+    "last_updated": "2026-04-17T14:44:58.272780Z",
+    "total_programs": 56,
     "source": "live_scraper"
   },
   "programs": [
@@ -186,27 +186,6 @@
         "HVAC",
         "Lighting",
         "Battery Storage",
-        "Solar",
-        "Building Controls"
-      ]
-    },
-    {
-      "name": "CT DEEP Energy Programs \u2014 Lighting, Solar, Building Controls",
-      "org": "CT DEEP",
-      "type": "State",
-      "cat": "Energy Efficiency",
-      "state": "CT",
-      "amt": "$62.45",
-      "itype": "Rebate",
-      "max": "",
-      "deadline": "Ongoing",
-      "sector": "Commercial, Industrial",
-      "stack": "Yes",
-      "url": "https://portal.ct.gov/DEEP/Energy",
-      "notes": "Energy Skip to Content Skip to Chat Warning! It seems that JavaScript is not working in your browser. It could be because it is not supported, or that JavaScript is intentionally disabled. Some of the features on CT.gov will not function properly with out javascript enabled. \u00d7 Settings Menu Language High Contrast High Contrast Mode On or Off switch On Off Font Size regular font size large font siz",
-      "qa_status": "unreviewed",
-      "equip": [
-        "Lighting",
         "Solar",
         "Building Controls"
       ]
