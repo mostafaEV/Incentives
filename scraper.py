@@ -239,7 +239,7 @@ def fetch_dsire(conn, equipment_filter=None):
         try:
             resp = requests.get(
                 "https://programs.dsireusa.org/api/v1/programs",
-                params={"page": page, "limit": 100, "active": "true"},
+                params={"page": page, "limit": 1000, "active": "true"},
                 timeout=30, headers={"Accept": "application/json"}
             )
             resp.raise_for_status()
@@ -751,10 +751,45 @@ def export_to_csv(conn, path="capex_incentives_export.csv"):
 
 
 def export_to_json(conn, path="capex_incentives.json"):
-    df = pd.read_sql("SELECT * FROM programs ORDER BY capex_category, state, name", conn)
-    df["equipment"] = df["equipment"].apply(lambda x: json.loads(x) if x else [])
-    df.to_json(path, orient="records", indent=2)
-    print(f"[export] Saved {len(df)} programs to {path}")
+    conn.row_factory = sqlite3.Row
+    rows = conn.execute("""
+        SELECT name, org,
+               program_type   as type,
+               capex_category as cat,
+               state,
+               equipment      as equip_json,
+               incentive_amount as amt,
+               incentive_type as itype,
+               max_incentive  as max,
+               deadline,
+               eligible_sectors as sector,
+               stacking_allowed as stack,
+               source_url     as url,
+               notes, qa_status
+        FROM programs
+        ORDER BY capex_category, state, name
+    """).fetchall()
+
+    programs = []
+    for r in rows:
+        p = dict(r)
+        try:
+            p['equip'] = json.loads(p.pop('equip_json') or '[]')
+        except Exception:
+            p['equip'] = []
+        programs.append(p)
+
+    output = {
+        "metadata": {
+            "last_updated": datetime.datetime.utcnow().isoformat() + "Z",
+            "total_programs": len(programs),
+            "source": "live_scraper"
+        },
+        "programs": programs
+    }
+    with open(path, "w") as f:
+        json.dump(output, f, indent=2)
+    print(f"[export] Saved {len(programs)} programs to {path}")
 
 
 def print_summary(conn):
@@ -791,7 +826,7 @@ if __name__ == "__main__":
     conn = init_db(DB_PATH)
     equip_all = list(EQUIPMENT_KEYWORDS.keys())
 
-    if run_all or "dsire"      in args.sources: fetch_dsire(conn, equipment_filter=equip_all)
+    if run_all or "dsire"      in args.sources: fetch_dsire(conn, equipment_filter=None)
     if run_all or "federal"    in args.sources: scrape_federal_sources(conn)
     if run_all or "utilities"  in args.sources: scrape_utilities(conn)
     if run_all or "states"     in args.sources: scrape_state_offices(conn, states=args.states)
