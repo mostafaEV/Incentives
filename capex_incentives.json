@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-04-27T12:12:34.270245Z",
+    "last_updated": "2026-05-04T12:16:03.500181Z",
     "total_programs": 80,
     "source": "live_scraper"
   },
@@ -288,7 +288,7 @@
       "type": "Utility",
       "cat": "Energy Efficiency",
       "state": "DC",
-      "amt": "Custom ($/HP)",
+      "amt": "$150 per hp",
       "itype": "Prescriptive Rebate ($/HP)",
       "max": "Varies",
       "deadline": "Ongoing",
