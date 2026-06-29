@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-06-22T12:22:47.812381Z",
+    "last_updated": "2026-06-29T11:20:26.396528Z",
     "total_programs": 80,
     "source": "live_scraper"
   },
@@ -1770,7 +1770,7 @@
       "type": "Federal",
       "cat": "Water & Wastewater",
       "state": "All",
-      "amt": "$181.4",
+      "amt": "$194",
       "itype": "Low-interest loan",
       "max": "No cap",
       "deadline": "Ongoing",
