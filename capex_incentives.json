@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-07-13T09:42:52.857169Z",
+    "last_updated": "2026-07-20T09:31:05.475469Z",
     "total_programs": 80,
     "source": "live_scraper"
   },
@@ -1507,7 +1507,7 @@
       "type": "Federal",
       "cat": "Manufacturing / Industrial",
       "state": "All",
-      "amt": "See program details",
+      "amt": "$40",
       "itype": "Technical Assistance + Cost Share",
       "max": "50% cost share",
       "deadline": "Ongoing",
