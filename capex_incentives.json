@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-21T12:39:03.054831Z",
+    "last_updated": "2026-09-28T13:40:01.222938Z",
     "total_programs": 80,
     "source": "live_scraper"
   },
@@ -1518,8 +1518,7 @@
       "qa_status": "unreviewed",
       "equip": [
         "HVAC",
-        "Lighting",
-        "Building Controls"
+        "Lighting"
       ]
     },
     {
