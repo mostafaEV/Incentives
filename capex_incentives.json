@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-10-19T12:53:07.818968Z",
+    "last_updated": "2026-10-26T12:45:14.557272Z",
     "total_programs": 80,
     "source": "live_scraper"
   },
@@ -1839,7 +1839,7 @@
       "type": "State",
       "cat": "Water & Wastewater",
       "state": "CA",
-      "amt": "$2",
+      "amt": "See program",
       "itype": "Grant",
       "max": "Varies",
       "deadline": "Rolling",
